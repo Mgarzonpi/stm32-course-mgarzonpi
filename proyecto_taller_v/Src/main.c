@@ -16,7 +16,44 @@
  ******************************************************************************
  */
 
+
+
+
+
 #include <stdint.h>
+
+/*variables*/
+
+/*Exercise 0.1*/
+uint8_t my_variable = 0;
+
+/*Exercise 0.2*/
+uint8_t dec = 0;
+uint8_t hex = 0;
+uint8_t bin = 0;
+
+
+
+/*Exercise 0.4*/
+
+
+int8_t c = 0;
+
+/*Exercise 0.6*/
+
+result = 0;
+
+/*Exercise 0.*/
+uint8_t x = 0;
+
+/*Exercise 1.1*/
+
+uint8_t a = 17;
+uint8_t b = 5;
+
+/*Exercise 1.3*/
+uint8_t val = 3;
+
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -24,6 +61,70 @@
 
 int main(void)
 {
-    /* Loop forever */
-	for(;;);
+	/*Exercise 0.1*/
+
+	uint8_t my_variable = 42;
+
+	/*Exercise 0.2*/
+
+	uint8_t dec = 65;
+	uint8_t hex = 0x41;
+	uint8_t bin = 0b01000001;
+
+
+	/*Exercise 0.4*/
+
+
+
+
+	/*Exercise 0.6*/
+
+	result = 0x0F + 0x01; /*orediccion 32 */
+	result = 0xFF + 0x01;  /*orediccion 273 */
+	result = 0xA0 + 0x5F;  /*orediccion 256 */
+	result = 0xA0 + 0x60;  /*orediccion 256 */
+
+
+	/*Exercise 0.7*/
+
+	x = 0x01;
+	x = 0x02;
+	x = 0x04;
+	x = 0x08;
+	x = 0x10;
+	x = 0x20;
+	x = 0x40;
+	x = 0x80;
+
+	/*Exercise 1.1*/
+
+	uint8_t div_result = a / b;
+	uint8_t mod_result = a % b;
+	uint8_t mul_result = a * b;
+
+	/*Exercise 1.3*/
+	uint8_t left1 = val << 1;
+	uint8_t left2 = val << 2;
+	uint8_t left3 = val << 3;
+	uint8_t right1 = val >> 1;
+
+
+
+
+   /* Loop forever */
+	while(1){}
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
