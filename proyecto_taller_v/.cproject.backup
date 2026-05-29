@@ -179,10 +179,10 @@
 	<storageModule moduleId="scannerConfiguration">
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.release.2024018558;com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.release.2024018558.;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1197451793;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.169845492">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 		<scannerConfigBuildInfo instanceId="com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1321274837;com.st.stm32cube.ide.mcu.gnu.managedbuild.config.exe.debug.1321274837.;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.1783003007;com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.c.compiler.input.c.1057361165">
-			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+			<autodiscovery enabled="false" problemReportingEnabled="true" selectedProfileId=""/>
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="refreshScope" versionNumber="2">
