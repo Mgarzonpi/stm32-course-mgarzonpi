@@ -93,12 +93,83 @@ int main(void)
 
 
 
+
 	/*clase 22 mayo*/
 	GPIOA->MODER;    // autocompleta bien
 
-	RCC_TypeDef *rcc = RCC;
-	rcc->    // usa esto en lugar de RCC->
+
+
+
+	/*clase 29 configuraciion TIM3*/
+
+
+	RCC->APB1ENR &= ~(RCC_APB1ENR_TIM3EN);
+
+
+	RCC->APB1ENR |= RCC_APB1ENR_TIM3EN;
+
+
+
+	TIM3->PSC = (1600 -1);
+
+
+	TIM3->ARR = (3250 -1);
+
+
+
+	TIM3->CNT = 0;
+
+
+	TIM3->SR &= ~(TIM_SR_UIF);
+
+
+
+	TIM3->DIER &= ~(TIM_DIER_UIE);
+
+
+	TIM3->DIER |= TIM_DIER_UIE;
+
+
+	/* MATRICULANDO LA INTERRUPCION TIM3 EN EL NVIC, PARA QUE SEA RECONOCIDA*/
+	__NVIC_EnableIRQ(TIM3_IRQn);
+
+
+
+	/* CONFIGURACION DE LA DIRECCION EN LA QUE EL CONTADOR CUENTA*/
+
+	TIM3->CR1 &= ~(TIM3_CR1_DIR);
+
+	/*ACTIVAMOS PRECARGA DEL ARR*/
+
+
+	TIM3->CR1 &= ~(TIM_CR1_ARPE);
+
+
+	TIM3->CR1 |= TIM_CR1_ARPE;
+
+
+	TIM3->CR1 |= TIM_CR1_CEN;
+
+
+
+
+
 
     /* Loop forever */
     while(1){}
+}
+
+
+
+
+/* FUNCION ISR PARA EL TIM3, TODA FUNCION ISR NO RRETORNA NADA (VOID)*/
+void TIM3_IRQHandler(void){
+
+	/*VERIFICAR QUE GENERO LA INTERUPCION*/
+	if(TIM3->SR && TIM_SR_UIF){
+		GPIOA->ODR ^= GPIO_ODR_OD5;
+
+
+		TIM3->SR
+	}
 }
