@@ -170,6 +170,6 @@ void TIM3_IRQHandler(void){
 		GPIOA->ODR ^= GPIO_ODR_OD5;
 
 
-		TIM3->SR
+
 	}
 }
